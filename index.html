@@ -101,19 +101,26 @@
         <div class="col-sm-4 col-md-3">
           <h2>Featured Campsites</h2>
         </div>
-        <div class="col">
-          <h3>React Lake Campground</h3>
+
+        
+          <div class="col">
+            <div class="media">
+              <div class="media-body">
+                    <h3>React Lake Campground</h3>
           <p class="d-none d-sm-block">
             Nestled in the foothills of the Chrome Mountains, this campground on
             the shores of the pristine React Lake is a favorite for fly fishers.
           </p>
-        </div>
-      </div>
+        </div><!--end media-body-->
+        <img class="img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake" class="d-flex align-self-center ml-3" /> 
+        </div><!--end media-->
+        </div><!--end col-->
 
       <div class="row row-content align-items-center">
         <div class="col-sm-4 order-sm-last col-md-3">
           <h2 class="text-sm-right">Our Community Partners</h2>
         </div>
+
         <div class="col">
           <div class="media">
             <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
@@ -154,6 +161,48 @@
                 </div>
         </div>
       </div>
+
+<!--registration form-->
+
+      <div class="row row-content"> 
+        <div class="col-sm-6 mx-auto">
+          <div class="card">
+            <h3 class="card-header bg-info text-white">Reserve A Campsite</h3>
+             <!--text auto aligns to left-->
+             <div class="card-body">
+               <form>
+                 <div class="row"> <!--row 1-->
+                  <!--<label for="number of campers">Number of Campers</label>-->
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="number of campers" class="col col-sm-6 col-form-label">Number of Campers</label>
+                      <select id="numCampers" class="form-control" name="numCampers">
+                        <option selected>Select</option> <!--use SELECTED after option?-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        
+                        
+
+                      </select>
+                    </div>
+
+
+                  </div><!--col end-->
+                   
+                 </div><!--end row 1-->
+               </form>
+
+             </div><!--end card-body-->
+
+          </div><!--end card-->
+
+        </div><!--end col-->
+     </div><!--end row-->
+    </div><!--container-->
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
