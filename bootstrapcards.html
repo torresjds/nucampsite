@@ -55,3 +55,56 @@
          </select>
        </div>
     </div>
+<!---->
+
+
+
+    <div class="row row-content"> 
+        <div class="col-sm-6 mx-auto">
+          <div class="card">
+            <h3 class="card-header bg-info text-white">Reserve A Campsite</h3>
+             <!--text auto aligns to left-->
+             <div class="card-body">
+               <form>
+                 <div class="row"> <!--row 1-->
+                  <!--<label for="number of campers">Number of Campers</label>-->
+                  <div class="col">
+                    <div class="form-group">
+                      <!--BS col class-->
+                      <label for="number of campers" class="col col-sm-6 col-form-label">Number of Campers</label>
+                      <select id="numCampers" class="form-control" name="numCampers">
+                        <option selected>Select</option> <!--use SELECTED after option?-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                    </div><!--end form group-->
+                  </div><!--col end-->
+                 </div><!--end row 1-->
+
+                 <div class="row"><!--row 2-->
+                  <div class="col">
+                  <div class="form-group">
+                    <label for="date" class="col col-sm-6 col-form-label">Date</label>
+                    <input type="date" name="date" id="date" class="form-control" placeholder="date">
+                  </div><!--end form group-->
+                  </div><!--col end-->
+                 </div><!--end row 2-->
+
+                 <div class="row">
+                   <div class="col">
+                      <div class="btn btn-primary" type="submit">Search</button>
+                   </div><!--col end-->
+                 </div><!--row 3 end-->
+               </form>
+
+             </div><!--end card-body-->
+
+          </div><!--end card-->
+
+        </div><!--end col-->
+     </div><!--end row-->
+      
