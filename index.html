@@ -34,8 +34,10 @@
     <header class="jumbotron jumbotron-fluid">
       
     <ul class="nav justify-content-end">
-      <div class="col col-md-4 col-xl-2">
-        <a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#bottom">Reserve Campsite</a>
+      <div class="col col-md-4 col-xl-2 ">
+        <a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reservation">Reserve Campsite</a>
+        <!--used section id around reserveForm to jump to the reservation form, see code in form section-->
+        <!--use href="#bottom" to jump to bottom of page, literallt jumps to bottom of page-->
         
       </div>
       </ul>
@@ -137,8 +139,9 @@
           </div> <!--end medi body outfit-->
           </div> <!--end media outfit-->
         </div> <!--col outfit-->
-        </div>  <!--end row commmunity-->      
-     
+        </div>  <!--end row commmunity-->  
+
+        
         <div class="row row-content">
           <div class="col col-sm-6 mx-auto">
             <div class="card">
@@ -146,11 +149,12 @@
                 Reserve a Campsite
               </h3>
               <div class="card-body">
+                <section id="reservation">
                 <form id="reserveForm">
                   <div class="row"><!--row one-->
                     <div class="col">
-                      <div class="form-group">
-                        <label for="number of campers" class="col col-sm-6 col-form-label">Number of Campers</label>
+                      <div class="form-group row"> <!--form-group row?-->
+                        <label for="number of campers" class="col-sm-6 col-form-label">Number of Campers</label>
                          <select id="numCampers" class="form-control" name="numCampers">
                         <option selected>Select</option> <!--use SELECTED after option?-->
                         <option value="1">1</option>
@@ -164,10 +168,10 @@
                     </div><!--end col-->
                   </div><!--end row one-->
 
-                  <div class="row"><!--row 2-->
+                  <div class="row"><!--row 2--> <!--form-group row-->
                   <div class="col">
-                  <div class="form-group">
-                    <label for="date" class="col col-sm-6 col-form-label">Date</label>
+                  <div class="form-group row">
+                    <label for="date" class="col-sm-6 col-form-label">Date</label>
                     <input type="date" name="date" id="date" class="form-control" placeholder="date">
                   </div><!--end form group-->
                   </div><!--col end-->
@@ -180,8 +184,10 @@
                  </div><!--row 3 end-->
 
                 </form><!--end form-->
+                </section>
               </div><!--end card body-->
             </div><!--end card-->
+            
 
          </div><!--end col sm 6-->
         </div> <!--end new row row content>-->
@@ -216,7 +222,7 @@
       </div>   
 
     </footer>
-    <div id="bottom"></div>
+    <!--<div id="bottom"></div>--> <!--JUMPS TO BOTTOM OF PAGE-->
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
 
