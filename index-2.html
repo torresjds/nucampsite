@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!--Other CSS is ALWAYS after Boostrap CSS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
+
+    <title>NuCamp2: A Better Way To Camp</title>
+</head>
+
+<body>
+
+<!--Add the jumbotron class to the header element in order to turn it into a jumbotron:<header class="jumbotron"> -->
+<!--In the body, locate the three main content row div elements (the div elements with the row class, inside the div element with the class of container). Add a row-content custom class to each of the three row divs, as you see below.<div class="row row-content"> -->
+
+<!--After adding a color to the jumbotron, you can see in the browser that its default rounded corners are visible. 
+Remove them by adding the jumbotron-fluid class to the header element as follows:
+    <header class="jumbotron jumbotron-fluid"> -->
+
+    <header class="jumbotron jumbotron-fluid"> 
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <h1>NuCamp</h1>
+                <h2>Camping a Better Way</h2>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </header>
+
+<!--NavBar-->
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+<!--button --> 
+        <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="nucampNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus-2.html"><i class="fa fa-info fa-lg"></i>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Sites</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i>Contact</a></li>
+        </ul>
+    </div><!--end collapse navbar-collapse nucampNavbar-->
+    </div><!--end container-->
+    </nav><!--end Nav-->
+
+<!--Inside index.html, update the first column in the first and third main content rows to add the order-sm-last class in each:-->  
+<!--We will vertically center the columns that are inside the content rows, using the Bootstrap Flexbox-based class align-items-center. For each of the three content row divs inside the body, update the rows to add the align-items-center class.--> 
+        <div class="container">
+            <div class="row row-content align-items-center">
+                <div class="col-sm-4 order-sm-last col-md-3">
+
+<!--To the h2 elements inside the first and last content rows, add the responsive class text-sm-right, as you see below. This class will only apply to small viewports and up, and will align the text inside the h2 element to the right-->
+                <h2 text-sm-right>Discover & Review</h2>
+                </div><!--col-->
+                    <h3>Our Campsites</h3>
+                    <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+        <h2>Featured Campsites</h2>
+        </div><!--end col-->
+        <div class="col">
+             <h3>React Lake Campground</h3>
+        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+    </div><!--end col-->
+    </div><!--end row-->
+
+    <div class="row row-content align-items-center">
+        <div class="col-sm-4 order-sm-last col-md-3">
+<!--To the h2 elements inside the first and last content rows, add the responsive class text-sm-right, as you see below. This class will only apply to small viewports and up, and will align the text inside the h2 element to the right-->
+        <h2 text-sm-right>Our Community Partners</h2>
+        </div><!--end col-->
+        <div class="col">
+            <h3>Bootstrap Outfitters</h3>
+            <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+        </div><!--end col-->
+    </div><!--end row-->
+</div><!--end container-->
+
+<!--In the footer element, there are three div elements. Turn these into three columns that are wrapped inside a single Bootstrap row div, which is in turn inside a single container div:-->
+<!--Another way to manipulate the Bootstrap Grid is by using the offset-* classes. With an offset-* class, you can force a Bootstrap column in a grid to the right by a specified number of columns (out of 12).
+Inside your footer, locate the div tag that contains the column classes for your "Links" list. It should currently contain the column classes col-4 col-sm-2. Add the class offset-1 to this tag as well, so that it looks like this:-->
+
+<footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    
+<!--The list-unstyled Bootstrap class simply removes default list styles. Add this class to the navigation ul inside the footer to remove the bullet points in front of the listitems:
+<h5>Links</h5> and  <ul class="list-unstyled"> -->
+
+                    <h5>Links</h5>   
+                    <ul class="list-unstyled">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="aboutus-2.html">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div><!--end col-->
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+</site-footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

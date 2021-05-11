@@ -71,7 +71,7 @@
               <a class="nav-link" href="#">
                 <i class="fa fa-home fa-lg"></i>Home</a> </li>
             
-              <li class="nav-item"> <a class="nav-link" href="aboutus.html"> <i class="fa fa-info fa-lg"></i>About</a>
+              <li class="nav-item"> <a class="nav-link" href="aboutus-2.html"> <i class="fa fa-info fa-lg"></i>About</a>
                 </li>
               <li class="nav-item"> <a class="nav-link" href="#"> <i class="fa fa-list fa-lg"></i>Sites</a>
             </li>
@@ -84,7 +84,10 @@
 
     <div class="container">
       <div class="row row-content align-items-center">
-        <div class="col-sm-4 order-sm-last col-md-3"> <!--is this right?-->
+        <div class="col-sm-4 order-sm-last col-md-3"> <!--is this right? yes-->
+
+<!--To the h2 elements inside the first and last content rows, add the responsive class text-sm-right, as you see below. This class will only apply to small viewports and up, and will align the text inside the h2 element to the right. 
+<h2 class="text-sm-right">Discover & Review</h2>-->
 
           <h2 class="text-sm-right">Discover & Review</h2>
         </div> <!--end h2 col end-->
@@ -93,6 +96,8 @@
           <img class="d-flex mr-3 img-thumbnail" src ="img/breadcrumb-trail-thumb.jpg" alt="breadcrumb trail thumbnail" />
           <div class="media-body align-self-center">
           <h3>Our Campsites</h3>
+<!--Also apply these two classes to the three p elements in the body of index.html.-->
+
           <p class="d-none d-sm-block">
             Explore our growing database of curated campsites and leave your own
             reviews!
@@ -124,6 +129,9 @@
 
       <div class="row row-content align-items-center">
         <div class="col-sm-4 order-sm-last col-md-3">
+
+<!--ALIGNMENT <h2 class="text-sm-right">Our Community Partners</h2>-->
+
           <h2 class="text-sm-right">Our Community Partners</h2>
         </div> <!--end h2 community-->
 
@@ -149,12 +157,12 @@
                 Reserve a Campsite
               </h3>
               <div class="card-body">
-                <section id="reservation">
+                <section id="reservation"> <!--link to reserve button in jumbotron-->
                 <form id="reserveForm">
                   <div class="row"><!--row one-->
-                    <div class="col">
-                      <div class="form-group row"> <!--form-group row?-->
-                        <label for="number of campers" class="col-sm-6 col-form-label">Number of Campers</label>
+                    <div class="col"> <!--DO I NEED SIZING HERE???? and in class="col-form-label" ???-->
+                      <div class="form-group"> <!--form-group row?-->
+                        <label for="number of campers" class="col-form-label">Number of Campers</label>
                          <select id="numCampers" class="form-control" name="numCampers">
                         <option selected>Select</option> <!--use SELECTED after option?-->
                         <option value="1">1</option>
@@ -170,7 +178,7 @@
 
                   <div class="row"><!--row 2--> <!--form-group row-->
                   <div class="col">
-                  <div class="form-group row">
+                  <div class="form-group">
                     <label for="date" class="col-sm-6 col-form-label">Date</label>
                     <input type="date" name="date" id="date" class="form-control" placeholder="date">
                   </div><!--end form group-->
@@ -193,15 +201,19 @@
         </div> <!--end new row row content>-->
       </div><!--end container-->
     <footer>
-      <!--end Footer for container for discover, featured, & Community-->
+
+ <!--end Footer for container for discover, featured, & Community-->
 
       <div class="container">
         <div class="row">
           <div class="col-4 col-sm-2 offset-1">
-            <h5>Links</h5> <!--LINK TO RESERVE BUTTON-->
+            
+<!--In index.html's footer, in the Links, also update the link to About to point to "aboutus.html" instead of "#". -->
+
+            <h5>Links</h5>            
             <ul class="list-unstyled">
               <li><a href="#">Home</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="aboutus-2.html">About Us</a></li>
               <li><a href="#">Sites</a></li>
               <li><a href="contactus.html">Contact</a></li>
             </ul>
