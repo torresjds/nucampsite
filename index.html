@@ -7,33 +7,21 @@
 
     <!-- Bootstrap CSS -->
     <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+      rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 
     <!-- additional CSS MUST BE AFTER bootstrap CSS-->
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"/>
     <link rel="stylesheet" href="css/styles.css" />
-
-    <link
-      rel="stylesheet"
-      href="node_modules/font-awesome/css/font-awesome.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap-social/bootstrap-social.css"
-    />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
     <title>NuCamp: A Better Way To Camp</title>
   </head>
 
   <body>
     <header class="jumbotron jumbotron-fluid">
-      
-    <ul class="nav justify-content-end">
+      <ul class="nav justify-content-end">
       <div class="col col-md-4 col-xl-2 ">
         <a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reservation">Reserve Campsite</a>
         <!--used section id around reserveForm to jump to the reservation form, see code in form section-->
@@ -122,7 +110,7 @@
                   the shores of the pristine React Lake is a favorite for fly fishers.
                   </p>
                   </div><!--end media-body-->
-                  <img class="img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake" class="d-flex align-self-center ml-3" /> 
+                  <img class="img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake" class="d-flex ml-3 align-self-center" /> 
                   </div><!--end media-->
             </div><!--end col-->
           </div> <!--end row from featured-->
@@ -133,8 +121,7 @@
 <!--ALIGNMENT <h2 class="text-sm-right">Our Community Partners</h2>-->
 
           <h2 class="text-sm-right">Our Community Partners</h2>
-        </div> <!--end h2 community-->
-
+        </div> <!--end col-->
         <div class="col">
           <div class="media">
             <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
@@ -149,7 +136,7 @@
         </div> <!--col outfit-->
         </div>  <!--end row commmunity-->  
 
-        
+      <!--STILL NEED TO FIGURE OUT HOW TO MAKE CAMPERS AND DATE STAY INLINE WITH INPUT FIELD - INLINE??-->
         <div class="row row-content">
           <div class="col col-sm-6 mx-auto">
             <div class="card">
@@ -161,8 +148,8 @@
                 <form id="reserveForm">
                   <div class="row"><!--row one-->
                     <div class="col"> <!--DO I NEED SIZING HERE???? and in class="col-form-label" ???-->
-                      <div class="form-group"> <!--form-group row?-->
-                        <label for="number of campers" class="col-form-label">Number of Campers</label>
+                      <div class="form-group row"> <!--form-group row?-->
+                        <label for="number of campers" class="col-sm-6 col-form-label">Number of Campers</label>
                          <select id="numCampers" class="form-control" name="numCampers">
                         <option selected>Select</option> <!--use SELECTED after option?-->
                         <option value="1">1</option>
@@ -178,7 +165,7 @@
 
                   <div class="row"><!--row 2--> <!--form-group row-->
                   <div class="col">
-                  <div class="form-group">
+                  <div class="form-group row">
                     <label for="date" class="col-sm-6 col-form-label">Date</label>
                     <input type="date" name="date" id="date" class="form-control" placeholder="date">
                   </div><!--end form group-->
@@ -200,7 +187,8 @@
          </div><!--end col sm 6-->
         </div> <!--end new row row content>-->
       </div><!--end container-->
-    <footer>
+
+    <footer class="site-footer">
 
  <!--end Footer for container for discover, featured, & Community-->
 
@@ -233,6 +221,10 @@
         
       </div>   
 
+      
+
+
+      
     </footer>
     <!--<div id="bottom"></div>--> <!--JUMPS TO BOTTOM OF PAGE-->
 

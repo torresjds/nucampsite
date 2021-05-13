@@ -18,7 +18,7 @@
     <title>NuCamp2: A Better Way To Camp</title>
 </head>
 
-<body>
+
 
 <!--Add the jumbotron class to the header element in order to turn it into a jumbotron:<header class="jumbotron"> -->
 <!--In the body, locate the three main content row div elements (the div elements with the row class, inside the div element with the class of container). Add a row-content custom class to each of the three row divs, as you see below.<div class="row row-content"> -->
@@ -26,10 +26,14 @@
 <!--After adding a color to the jumbotron, you can see in the browser that its default rounded corners are visible. 
 Remove them by adding the jumbotron-fluid class to the header element as follows:
     <header class="jumbotron jumbotron-fluid"> -->
+    <body>
+    <header class="jumbotron jumbotron-fluid">
 
-    <header class="jumbotron jumbotron-fluid"> 
         <div class="container">
             <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                   <img src="img/logo.png" class="img-fluid" /></a>
+                </div>    
                 <div class="col">
                 <h1>NuCamp</h1>
                 <h2>Camping a Better Way</h2>
@@ -43,7 +47,9 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 <!--button --> 
         <div class="container">
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -67,67 +73,138 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
 <!--To the h2 elements inside the first and last content rows, add the responsive class text-sm-right, as you see below. This class will only apply to small viewports and up, and will align the text inside the h2 element to the right-->
                 <h2 text-sm-right>Discover & Review</h2>
                 </div><!--col-->
+                <div class="col">
+                    <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                    <div class="media-body align-self-center">
                     <h3>Our Campsites</h3>
-                    <p>Explore our growing database of curated campsites and leave your own reviews!</p>
-            </div><!--end row-->
-        </div><!--end container-->
+                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                    </div><!--medi body-->
+        </div><!--end media-->
+    </div><!--end col-->
+    </div><!--end row-->
 
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
         <h2>Featured Campsites</h2>
         </div><!--end col-->
+
         <div class="col">
-             <h3>React Lake Campground</h3>
-        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-    </div><!--end col-->
-    </div><!--end row-->
+            <div class="media">
+                <div class="media-body">
+                    <h3>React Lake Campground</h3>
+                    <p> <!--HOW DO I STYLE THIS TO CENTER WITH FEATURED LAKES?--><!--??????-->
+                        Nestled in the foothills of the Chrome Mountains, this campground on
+                        the shores of the pristine React Lake is a favorite for fly fishers.
+                    </p>
+                </div><!--end media-body-->
+                  <img class="img-thumbnail" src="img/react-lake-thumb.jpg" alt="react lake" class="d-flex ml-3 align-self-center" /> 
+            </div><!--end media-->
+            </div><!--end col-->
+        </div> <!--end row row-content from featured-->
 
     <div class="row row-content align-items-center">
         <div class="col-sm-4 order-sm-last col-md-3">
-<!--To the h2 elements inside the first and last content rows, add the responsive class text-sm-right, as you see below. This class will only apply to small viewports and up, and will align the text inside the h2 element to the right-->
+
         <h2 text-sm-right>Our Community Partners</h2>
         </div><!--end col-->
         <div class="col">
-            <h3>Bootstrap Outfitters</h3>
-            <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+            <div class="media"> <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                <div class="media-body align-self-center">
+                <h3>Bootstrap Outfitters</h3>
+                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.
+                </p>
+                </div><!--end media body-->
+            </div><!--end media-->
         </div><!--end col-->
     </div><!--end row-->
-</div><!--end container-->
 
-<!--In the footer element, there are three div elements. Turn these into three columns that are wrapped inside a single Bootstrap row div, which is in turn inside a single container div:-->
-<!--Another way to manipulate the Bootstrap Grid is by using the offset-* classes. With an offset-* class, you can force a Bootstrap column in a grid to the right by a specified number of columns (out of 12).
-Inside your footer, locate the div tag that contains the column classes for your "Links" list. It should currently contain the column classes col-4 col-sm-2. Add the class offset-1 to this tag as well, so that it looks like this:-->
+<div class="row row-content">
+          <div class="col col-sm-6 mx-auto">
+            <div class="card">
+              <h3 class="card-header bg-info text-white">
+                Reserve a Campsite
+              </h3>
+              <div class="card-body">
+                <section id="reservation"> <!--link to reserve button in jumbotron-->
+                <form id="reserveForm">
+                  <div class="row"><!--row one-->
+                    <div class="col"> <!--DO I NEED SIZING HERE???? and in class="col-form-label" ???-->
+                      <div class="form-group"> <!--form-group row?-->
+                        <label for="number of campers" class="col-form-label">Number of Campers</label>
+                         <select id="numCampers" class="form-control" name="numCampers">
+                        <option selected>Select</option> <!--use SELECTED after option?-->
+                        <option value="1">1</option>
+                        <option value="2">2</option >
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                      </div><!--end form-group-->
+                    </div><!--end col-->
+                  </div><!--end row one-->
+
+                  <div class="row"><!--row 2--> <!--form-group row-->
+                  <div class="col">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-6 col-form-label">Date</label>
+                    <input type="date" name="date" id="date" class="form-control" placeholder="date">
+                  </div><!--end form group-->
+                  </div><!--col end-->
+                 </div><!--end row 2-->
+
+                  <div class="row">
+                   <div class="col">
+                      <div class="btn btn-primary" type="submit">Search</button>
+                   </div><!--col end-->
+                 </div><!--row 3 end-->
+
+                </form><!--end form-->
+                </section>
+              </div><!--end card body-->
+            </div><!--end card-->
+            
+
+         </div><!--end col sm 6-->
+        </div> <!--end new row row content>-->
+      </div><!--end container-->
 
 <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-2 offset-1">
-                    
-<!--The list-unstyled Bootstrap class simply removes default list styles. Add this class to the navigation ul inside the footer to remove the bullet points in front of the listitems:
-<h5>Links</h5> and  <ul class="list-unstyled"> -->
 
-                    <h5>Links</h5>   
-                    <ul class="list-unstyled">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li><a href="aboutus-2.html">About</a></li>
-                        <li><a href="#">Sites</a></li>
-                        <li><a href="contactus.html">Contact</a></li>
-                    </ul>
-                
-                <div class="col-6 col-sm-5 text-center">
-                    <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                </div><!--end col-->
-                <div class="col-sm-4 text-center">
+ <!--end Footer for container for discover, featured, & Community-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-sm-2 offset-1">
+            
+<!--In index.html's footer, in the Links, also update the link to About to point to "aboutus.html" instead of "#". -->
+
+            <h5>Links</h5>            
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="aboutus-2.html">About Us</a></li>
+              <li><a href="#">Sites</a></li>
+              <li><a href="contactus.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-5 text-center">
+            <h5>Social</h5>
+            <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> <i class="fa fa-facebook"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"> <i class="fa fa-twitter"></i></a>
+            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"> <i class="fa fa-youtube"></i></a>
+          </div>
+          <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
                     <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-                </div><!--end col-->
-            </div><!--end row-->
-        </div><!--end container-->
-</site-footer>
+                </div>
+        </div>
+        
+      </div>   
+
+    </footer>
+    <!--<div id="bottom"></div>--> <!--JUMPS TO BOTTOM OF PAGE-->
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
