@@ -27,7 +27,16 @@
 Remove them by adding the jumbotron-fluid class to the header element as follows:
     <header class="jumbotron jumbotron-fluid"> -->
     <body>
-    <header class="jumbotron jumbotron-fluid">
+    
+      <header class="jumbotron jumbotron-fluid">
+      <ul class="nav justify-content-end">
+      <div class="col col-md-4 col-xl-2 ">
+        <a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at 1-206-555-1234">Reserve Campsite</a>
+        <!--used section id around reserveForm to jump to the reservation form, see code in form section-->
+        <!--use href="#bottom" to jump to bottom of page, literallt jumps to bottom of page-->
+        <!-- data-toggle, data-placement, title, and data-html. The minimum two attributes you need to add to create a tooltip are the data-toggle="tooltip" and title attributes. The title holds the text for the tooltip. The other two tooltip-related attributes we used above are optional. The data-html attribute allows you to use HTML inside the title. The tooltip won't work just yet. It needs to be activated by adding a little bit of JavaScript (in the form of jQuery) to the bottom of the page as follows:-->
+      </div>
+      </ul>
 
         <div class="container">
             <div class="row">
@@ -210,6 +219,11 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script><!--tooltips over Reserve button-->
 
 </body>
 
