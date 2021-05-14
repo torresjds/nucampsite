@@ -36,7 +36,15 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
         <!--use href="#bottom" to jump to bottom of page, literallt jumps to bottom of page-->
         <!-- data-toggle, data-placement, title, and data-html. The minimum two attributes you need to add to create a tooltip are the data-toggle="tooltip" and title attributes. The title holds the text for the tooltip. The other two tooltip-related attributes we used above are optional. The data-html attribute allows you to use HTML inside the title. The tooltip won't work just yet. It needs to be activated by adding a little bit of JavaScript (in the form of jQuery) to the bottom of the page as follows:-->
       </div>
-      </ul>
+    </ul>
+    <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Login
+                    </a>
+      </span>
+
+      <!--adding a MODAL button-->
+      
 
         <div class="container">
             <div class="row">
@@ -72,6 +80,45 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     </div><!--end collapse navbar-collapse nucampNavbar-->
     </div><!--end container-->
     </nav><!--end Nav-->
+
+    <!--to get, MODAL button-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <!--Inside index.html, update the first column in the first and third main content rows to add the order-sm-last class in each:-->  
 <!--We will vertically center the columns that are inside the content rows, using the Bootstrap Flexbox-based class align-items-center. For each of the three content row divs inside the body, update the rows to add the align-items-center class.--> 
