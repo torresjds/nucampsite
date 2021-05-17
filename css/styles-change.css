@@ -1,5 +1,7 @@
 body {
     font-family: "Open Sans", sans-serif;
+    color: red;
+    background-color: white;
 }
 
 h1, h2, h3 {
@@ -12,10 +14,7 @@ h2 {
 
 header h2 {
     color: #CEC8FF;
-    
 }
-
-
 
 .site-footer {
     background-image: linear-gradient(#CEC8FF, white);
@@ -29,6 +28,10 @@ header h2 {
     margin: 0;
 }
 
+.nav-link {
+    color: white;
+}
+
 .row-content {
     padding: 50px 0;
     border-bottom: 1px ridge;
@@ -36,11 +39,11 @@ header h2 {
 }
 
 .navbar {
-     background-color: #901CAD;
+     
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(99, 12, 12, 0.4);
 }
 
 .carousel {

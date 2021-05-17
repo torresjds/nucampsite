@@ -11,7 +11,7 @@
 
     <!--Other CSS is ALWAYS after Boostrap CSS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles-change.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
 
@@ -28,17 +28,14 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     <header class="jumbotron jumbotron-fluid"> -->
     <body>
       <header class="jumbotron jumbotron-fluid">
-      <!--removed UL and NAv for reserve button
-
       <ul class="nav justify-content-end">
-      <div class="col col-md-4 col-xl-2 ">-->
-        <!--<a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at 1-206-555-1234">Reserve Campsite</a>-->
-
-       <!-- used section id around reserveForm to jump to the reservation form, see code in form section-->
-
+      <div class="col col-md-4 col-xl-2 ">
+        <a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at 1-206-555-1234">Reserve Campsite</a>
+        <!--used section id around reserveForm to jump to the reservation form, see code in form section-->
         <!--use href="#bottom" to jump to bottom of page, literallt jumps to bottom of page-->
         <!-- data-toggle, data-placement, title, and data-html. The minimum two attributes you need to add to create a tooltip are the data-toggle="tooltip" and title attributes. The title holds the text for the tooltip. The other two tooltip-related attributes we used above are optional. The data-html attribute allows you to use HTML inside the title. The tooltip won't work just yet. It needs to be activated by adding a little bit of JavaScript (in the form of jQuery) to the bottom of the page as follows:-->
-       
+      </div>
+    </ul>  
 
     <div class="container">
       <div class="row">
@@ -48,89 +45,11 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
             <h1>NuCamp</h1>
               <h2>Camping a Better Way</h2>
           </div><!--end col-->
-          <div class="col-md-4 col-xl-2 mt-4">
-            <div class="btn btn-lg btn-info" button type="button" data-toggle="modal" data-target="#reserveModal" role="button">Reserve Campsite
-            </div>           
         </div><!--end row-->
-         </div><!--end container-->
+    </div><!--end container-->
     </header>
 
-    <!--MODAL FORM, copied login modal code-->
-
-    <div id="reserveModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="modal-title">Reserve a Campsite!</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                      <form id="reserveForm">
-                  <div class="row"><!--row one-->
-                    <div class="col">
-                      <div class="form-group row"> 
-                        <label for="number of campers" class="col col-form-label">Number of Campers</label>
-                         <select id="numCampers" class="form-control" name="numCampers">
-                        <option selected>Select</option> <!--use SELECTED after option?-->
-                        <option value="1">1</option>
-                        <option value="2">2</option >
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                      </select>
-                      </div><!--end form-group-->
-                    </div><!--end col-->
-                  </div><!--end row one-->
-                  <div class="row"><!--row 2--> <!--form-group row-->
-                  <div class="col">
-                  <div class="form-group row">
-                    <label for="date" class="col col-form-label">Date</label>
-                    <input type="date" name="date" id="date" class="form-control" placeholder="date">
-                  </div><!--end form group-->
-
-                  <!--RV / TENT BUTTONS-->
-
-                  <div class="form-group row">
-                    <label for="siteType" class="col col-form-label">Campsite Type</label>
-                  <div class="col-2">
-                    <div class="btn-group btn-group-toggle" role="group" data-toggle="buttons">
-                        <label class="btn btn-secondary bg-success active">
-                        <input type="radio" name="siteType" id="tent" autocomplete="off" checked> TENT
-                        </label>
-                        <label class="btn btn-secondary bg-primary">
-                        <input type="radio" name="siteType" id="rv" autocomplete="off"> RV
-                        </label>
-                    </div>
-                  </div>
-                  </div><!--form group row for RV TENT BUTTON-->
-                  </div>
-                  </div>
-                 </div>
-
-                 <!--SEARCH AND CANCEL BUTTONS-->
-
-                 <div class="row">
-                   <div class="col">
-                      <div class="btn btn-primary" type="submit">Search</button>
-                      </div>
-                      
-                      <div type="button" class="btn btn-primary bg-secondary" data-dismiss="modal">Cancel</button>
-                      </div>
-                 </div>
-                 </div>
-                </form>              
-              </div>
-            </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>                                                                     
-    <!-- end MODAL FORM-->
-
-    <!--NavBar--> 
+<!--NavBar-->
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 <!--button --> 
@@ -149,8 +68,9 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
             <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i>Contact</a></li>
         </ul>
 
-    <!--adding, a MODAL button, Login-->
-        <span class="navbar-text ml-auto">
+    <!--adding, a MODAL button, Login--> <!<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+        <!--<span class="navbar-text ml-auto">
                     <a role="button" data-toggle="modal" data-target="#loginModal">
                         <i class="fa fa-sign-in"></i> Login
                     </a>
@@ -160,7 +80,7 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     </nav><!--end Nav-->
 
     <!--to get, MODAL button-->
-    <div id="loginModal" class="modal fade" role="dialog">
+   <!-- <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -196,7 +116,7 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
             </div>
         </div>
     </div>
-
+  -->
 
 <!--Inside index.html, update the first column in the first and third main content rows to add the order-sm-last class in each:-->  
 <!--We will vertically center the columns that are inside the content rows, using the Bootstrap Flexbox-based class align-items-center. For each of the three content row divs inside the body, update the rows to add the align-items-center class.-->
@@ -299,6 +219,57 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
         </div><!--end col-->
     </div><!--end row-->
 
+<div class="row row-content">
+          <div class="col col-sm-6 mx-auto">
+            <div class="card">
+              <h3 class="card-header bg-info text-white">
+                Reserve a Campsite
+              </h3>
+              <div class="card-body">
+                <section id="reservation"> <!--link to reserve button in jumbotron-->
+                <form id="reserveForm">
+                  <div class="row"><!--row one-->
+                    <div class="col"> <!--DO I NEED SIZING HERE???? and in class="col-form-label" ???-->
+                      <div class="form-group"> <!--form-group row?-->
+                        <label for="number of campers" class="col-form-label">Number of Campers</label>
+                         <select id="numCampers" class="form-control" name="numCampers">
+                        <option selected>Select</option> <!--use SELECTED after option?-->
+                        <option value="1">1</option>
+                        <option value="2">2</option >
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select>
+                      </div><!--end form-group-->
+                    </div><!--end col-->
+                  </div><!--end row one-->
+
+                  <div class="row"><!--row 2--> <!--form-group row-->
+                  <div class="col">
+                  <div class="form-group">
+                    <label for="date" class="col-sm-6 col-form-label">Date</label>
+                    <input type="date" name="date" id="date" class="form-control" placeholder="date">
+                  </div><!--end form group-->
+                  </div><!--col end-->
+                 </div><!--end row 2-->
+
+                  <div class="row">
+                   <div class="col">
+                      <div class="btn btn-primary" type="submit">Search</button>
+                   </div><!--col end-->
+                 </div><!--row 3 end-->
+
+                </form><!--end form-->
+                </section>
+              </div><!--end card body-->
+            </div><!--end card-->
+            
+
+         </div><!--end col sm 6-->
+        </div> <!--end new row row content>-->
+      </div><!--end container-->
+
 <footer class="site-footer">
 
  <!--end Footer for container for discover, featured, & Community-->
@@ -339,13 +310,11 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <!--tooltips over Reserve button
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-    </script>tooltips over Reserve button-->
+    </script><!--tooltips over Reserve button-->
 
 </body>
 
