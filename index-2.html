@@ -15,42 +15,22 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"/>
 
-    <title>NuCamp2: A Better Way To Camp</title>
+    <title>NuCamp: A Better Way To Camp</title>
 </head>
 
-
-
-<!--Add the jumbotron class to the header element in order to turn it into a jumbotron:<header class="jumbotron"> -->
-<!--In the body, locate the three main content row div elements (the div elements with the row class, inside the div element with the class of container). Add a row-content custom class to each of the three row divs, as you see below.<div class="row row-content"> -->
-
-<!--After adding a color to the jumbotron, you can see in the browser that its default rounded corners are visible. 
-Remove them by adding the jumbotron-fluid class to the header element as follows:
-    <header class="jumbotron jumbotron-fluid"> -->
     <body>
       <header class="jumbotron jumbotron-fluid">
-      <!--removed UL and NAv for reserve button
-
-      <ul class="nav justify-content-end">
-      <div class="col col-md-4 col-xl-2 ">-->
-        <!--<a class="btn btn-primary btn-lg bg-info text-white d-flex m-4" href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at 1-206-555-1234">Reserve Campsite</a>-->
-
-       <!-- used section id around reserveForm to jump to the reservation form, see code in form section-->
-
-        <!--use href="#bottom" to jump to bottom of page, literallt jumps to bottom of page-->
-        <!-- data-toggle, data-placement, title, and data-html. The minimum two attributes you need to add to create a tooltip are the data-toggle="tooltip" and title attributes. The title holds the text for the tooltip. The other two tooltip-related attributes we used above are optional. The data-html attribute allows you to use HTML inside the title. The tooltip won't work just yet. It needs to be activated by adding a little bit of JavaScript (in the form of jQuery) to the bottom of the page as follows:-->
        
-
     <div class="container">
       <div class="row">
         <div class="col-4 col-sm-3 col-md-2 align-self-center"><img src="img/logo.png" class="img-fluid" /></a>
         </div>    
           <div class="col">
             <h1>NuCamp</h1>
-              <h2>Camping a Better Way</h2>
+              <h2>A Better Way to Camp</h2>
           </div><!--end col-->
           <div class="col-md-4 col-xl-2 mt-4">
-            <div class="btn btn-lg btn-info" button type="button" data-toggle="modal" data-target="#reserveModal" role="button">Reserve Campsite
-            </div>           
+            <div class="btn btn-lg btn-info" button type="button" data-toggle="modal" data-target="#reserveModal" role="button">Reserve Campsite</div>           
         </div><!--end row-->
          </div><!--end container-->
     </header>
@@ -197,11 +177,9 @@ Remove them by adding the jumbotron-fluid class to the header element as follows
         </div>
     </div>
 
-
-<!--Inside index.html, update the first column in the first and third main content rows to add the order-sm-last class in each:-->  
-<!--We will vertically center the columns that are inside the content rows, using the Bootstrap Flexbox-based class align-items-center. For each of the three content row divs inside the body, update the rows to add the align-items-center class.-->
-
-        <div class="container">           <!--Main PAGE CONTENT-->
+         <!--Main PAGE CONTENT-->
+         
+        <div class="container">          
           <div class="row row-content">
             <div class="col-md-8 mx-auto">
               <div id="homeCarousel" class="carousel slide" data-ride="carousel">
