@@ -1,0 +1,7 @@
+/*
+Bootstrap's JavaScript components, such as the Carousel and Tooltips, offer ways to manipulate the components by using either HTML data-* attributes or by writing JavaScript.
+The JavaScript used in Bootstrap is through a very popular JS library called jQuery.
+jQuery was first created in 2006 and is the most popular JavaScript library in the world. At the time it was created, it offered powerful ways to do tasks that were otherwise difficult at the time, such as selecting DOM elements, handling cross-browser issues, and more.
+Since then, advances in browser technology and in JavaScript itself have made it easy to handle such tasks without using jQuery, and as a result, jQuery has begun to experience a decline in usage.
+However, its usage is so widespread that it will still continue to be relevant for some time. A 2019 report from w3techs.com states that jQuery is still used on over 74% of all websites. So it is still useful to know how to use jQuery. 
+We will not be studying jQuery in depth in this course, but the next two lessons will cover examples of how to manipulate Bootstrap components with it. 

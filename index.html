@@ -222,6 +222,18 @@
                         <span class="sr-only">Next</span>
                     </a>
 
+                    <!--PLAY and PAUSE Buttons for Carousel-->
+
+            <div class="btn-group" id="carouselButton">
+                <button class="btn btn-danger btn-small" id="carouselPause">
+                    <i class="fa fa-pause"></i>
+                </button>
+
+                <button class="btn btn-danger" id="carouselPlay">
+                    <i class="fa fa-play"></i>
+                </button>
+            </div>
+
               </div><!--end home carousel-->
               </div><!--end col-->
               </div><!--end first row-->
@@ -278,15 +290,11 @@
     </div><!--end row-->
 
 <footer class="site-footer">
-
- <!--end Footer for container for discover, featured, & Community-->
-
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-4 col-sm-2 offset-1">
             
 <!--In index.html's footer, in the Links, also update the link to About to point to "aboutus.html" instead of "#". -->
-
             <h5>Links</h5>            
             <ul class="list-unstyled">
               <li><a href="#">Home</a></li>
@@ -306,17 +314,32 @@
                     <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
                     <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
                 </div>
-        </div>
-        
+        </div>     
       </div>   
-
     </footer>
-    <!--<div id="bottom"></div>--> <!--JUMPS TO BOTTOM OF PAGE-->
+            <!--<div id="bottom"></div>--> <!--JUMPS TO BOTTOM OF PAGE-->
 
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+            <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+            <!--jQuery Play and Pause Scripting, second half is Play and Cycle-->
+    <script>
+        $(function () {
+            $(".carousel").carousel ({ interval: 2000 });
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel ("pause");
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel ("cycle"); 
+            }); 
+        });
+    </script>
+
+
+            <!--tooltips over Reserve Button, deleted-->
     
     <!--tooltips over Reserve button
     <script>
@@ -328,3 +351,21 @@
 </body>
 
 </html>
+
+
+<!--At the bottom of index.html, below the script tags for jQuery, Popper, and Bootstrap and before the closing body tag (where you previously had the script to activate tooltips) add the following code. It will set the carousel image cycle interval to 2000 ms upon load (the default is 5000 ms otherwise), and implement pause/play functionality via the jQuery click() method:
+
+
+NOTE: This code that we are using in the beginning of the jQuery script:
+$(function() { ... });
+is the shorthand, recommended version for this code, called the jQuery ready method or ready function, which specifies a function to load when the webpage's DOM is ready:
+$( document).ready(function() { ... });
+
+Note: An issue has been discovered with the carousel pause button on touchscreens. 
+To fix this issue, you can replace this line:
+
+$(".carousel").carousel( { interval: 2000 } );
+with:
+
+$(".carousel").carousel( { interval: 2000, pause: "false" } );
+-->
