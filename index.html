@@ -222,17 +222,11 @@
                         <span class="sr-only">Next</span>
                     </a>
 
-                    <!--PLAY and PAUSE Buttons for Carousel-->
+                    <!--PLAY and PAUSE Buttons for Carousel, removed Play, to MAKE single Toggle-->
 
-            <div class="btn-group" id="carouselButton">
-                <button class="btn btn-danger btn-small" id="carouselPause">
+                <button class="btn btn-danger btn-small" id="carouselButton">
                     <i class="fa fa-pause"></i>
                 </button>
-
-                <button class="btn btn-danger" id="carouselPlay">
-                    <i class="fa fa-play"></i>
-                </button>
-            </div>
 
               </div><!--end home carousel-->
               </div><!--end col-->
@@ -325,16 +319,21 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-            <!--jQuery Play and Pause Scripting, second half is Play and Cycle-->
-    <script>
-        $(function () {
-            $(".carousel").carousel ({ interval: 2000 });
-            $("#carouselPause").click(function(){
-                $(".carousel").carousel ("pause");
+            <!--jQuery Pause and Cycle Scripting, , Single Toggle CYCLE button-->
+     <script>
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause"); 
+                }
             });
-            $("#carouselPlay").click(function(){
-                $(".carousel").carousel ("cycle"); 
-            }); 
         });
     </script>
 
@@ -355,6 +354,19 @@
 
 <!--At the bottom of index.html, below the script tags for jQuery, Popper, and Bootstrap and before the closing body tag (where you previously had the script to activate tooltips) add the following code. It will set the carousel image cycle interval to 2000 ms upon load (the default is 5000 ms otherwise), and implement pause/play functionality via the jQuery click() method:
 
+    jQuery Play and Pause Scripting, second half is Play and Cycle
+
+    <script>
+        $(function () {
+            $(".carousel").carousel ({ interval: 2000 });
+            $("#carouselPause").click(function(){
+                $(".carousel").carousel ("pause");
+            });
+            $("#carouselPlay").click(function(){
+                $(".carousel").carousel ("cycle"); 
+            }); 
+        });
+    </script>
 
 NOTE: This code that we are using in the beginning of the jQuery script:
 $(function() { ... });
@@ -368,4 +380,15 @@ $(".carousel").carousel( { interval: 2000 } );
 with:
 
 $(".carousel").carousel( { interval: 2000, pause: "false" } );
+
+TOGGLE BUTTON, SINGLE PRESS
+Replace the button group with Play/Pause buttons on the carousel with a single button that will toggle between Play and Pause when clicked.
+Modify the jQuery script so that when the button is clicked, it will change from Play to Pause or vice versa, and also cause the desired carousel behavior.
+
+In index.html, delete the div with the btn-group class around the Play and Pause buttons for the carousel. 
+Delete the Play button as well, but leave the Pause button. 
+Rename the id for the Pause button from "carouselPause" to "carouselButton".
+
+
+
 -->

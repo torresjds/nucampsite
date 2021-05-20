@@ -5,3 +5,104 @@ jQuery was first created in 2006 and is the most popular JavaScript library in t
 Since then, advances in browser technology and in JavaScript itself have made it easy to handle such tasks without using jQuery, and as a result, jQuery has begun to experience a decline in usage.
 However, its usage is so widespread that it will still continue to be relevant for some time. A 2019 report from w3techs.com states that jQuery is still used on over 74% of all websites. So it is still useful to know how to use jQuery. 
 We will not be studying jQuery in depth in this course, but the next two lessons will cover examples of how to manipulate Bootstrap components with it. 
+
+
+
+
+CSS PREPROCESSORS and Sass, sassy css
+
+premier CSS extension language.
+
+Sass is completely compatible with all versions of CSS. We take this compatibility seriously, so that you can seamlessly use any available CSS libraries.
+
+Sass has been actively supported for over 14 years by its loving Core Team.
+
+There are an endless number of frameworks built with Sass. Compass, Bourbon, and Susy just to name a few.
+
+CSS preprocessors are stylesheet scripting languages that take CSS one step further, adding powerful features such as variables, functions, mixins, and more. They make it easier to write and maintain large, complex stylesheets. Stylesheet files written with preprocessors are compiled to regular CSS syntax before deployment. 
+Sass is the CSS preprocessor that's used to write the source CSS code for Bootstrap 4, and thus it is useful to learn Sass if you ever want to theme Bootstrap or customize its source code. 
+There are other CSS preprocessors; the one used to write Bootstrap 3 is called Less. 
+There are two variants of Sass - Sass (.sass) and Scss (.scss) - there are a few syntactic differences but their functionality is the same.
+In the next lesson, you will learn how to use a little Sass, then how to install and use a Sass compiler.
+
+SassScript is itself a scripting language. Its typing discipline is dynamic. SCSS is often called Sassy CSS, which was introduced as the main syntax for the SASS (Syntactically Awesome Style Sheets), which builds on top of the existing CSS syntax. It makes use of semicolons and brackets like CSS (Cascaded Style Sheets). SCSS is a superset of CSS, i.e. all the CSS features will be available in SCSS and contains few features of the SASS (Syntactically Awesome Style Sheets). SCSS makes any CSS term as a valid one.
+
+Add Scss variables
+Open the nucampsite project folder in VS Code. In the css folder, create a file named styles.scss. 
+Into this file, copy all the code over from styles.css.
+Add the following Scss variables into the file at the top:
+$color-primary: #3046C5;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+Use the Scss Variables
+Update the .scss file with Scss variables for the following rulesets:
+
+body {
+    font-family: $body-font;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
+    color: white;
+}
+
+.carousel-caption {
+    background-color: $color-black-transparent;
+}
+
+NESTING SELECTORS
+
+Replace the CSS rule for "header h2" in your .scss file with the following:
+
+header {
+    h2 {
+        color: $color-pale;
+    }
+}
+
+INSTALL THE css Complier
+
+Next, use NPM to install a sass compiler. 
+
+IMPORTANT! Check your Node version using the node -v command. 
+Type the following into your bash terminal from inside your project folder. If your Node version is a 14.x version, enter:
+
+npm install --save-dev node-sass@4.14.1
+
+If your Node version is a 15.x version, enter:
+npm install --save-dev node-sass@5.0.0
+
+
+COMPILATION SCRIPT ADD, TO package.json, file
+
+Open your package.json file in VS Code, and add the following line into the scripts object there. 
+This script makes use of the node-sass utility to compile the .scss  file into a .css  file. 
+"scss": "node-sass -o css/ css/"
+
+Make sure that you add a comma to the end of the line above it (unless you add this as the very first line in the scripts object). Compare your package.json's scripts object to this code:
+
+  "scripts": {
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  
+
+Run the SCSS compiler
+If you want to save your previous styles.css file, this would be a good time to move it somewhere else, or rename it something like styles.css.old. This is not a required step, but recommended since the Scss compiler will overwrite the existing css file. 
+Now in order to compile the .scss file to a .css file using the script you defined previously, type the following into your bash terminal, from the nucampsite folder:
+npm run scss
+This should have created a new styles.css file in your css folder. If you saved a backup of your old styles.css file, you should be able to compare it and see that they are the same. 
+
+
+Summary
+In this exercise, you created a SCSS file and rewrote your custom stylesheet to make use of Sass variables and nesting. Then you installed the node-sass compiler and added a script to your package.json file to run the compiler. You then used that script to compile your SCSS file to a CSS file.
+
+
