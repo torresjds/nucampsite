@@ -103,6 +103,8 @@ This should have created a new styles.css file in your css folder. If you saved 
 
 you created a SCSS file and rewrote your custom stylesheet to make use of Sass variables and nesting. Then you installed the node-sass compiler and added a script to your package.json file to run the compiler. You then used that script to compile your SCSS file to a CSS file.
 
+BUILDING AND DEPLOYMENT: NPM SCRIPTS
+
 Prepare for building by moving your jQuery script for the carousel to an external JavaScript file.
 Install the onchange module to enable your project to to watch for changes to its files.
 Install the parallelshell module to enable your project to run multiple NPM scripts in parallel.
@@ -110,9 +112,13 @@ Watch for any changes to your Sass file and automatically compile it to css.
 
 Instructions
 Move the jQuery script into external script file
-Open the project folder in VS Code. Inside it, create a folder named js.
-Inside the js folder, create a file named scripts.js.
+
+Create a folder named js inside VSCode
+
+Create a file named scripts.js inside js folder
+
 Open index.html and cut out the jQuery code inside the script element at the bottom (but leave the script tags) and move this code to the scripts.js file. 
+
 In index.html, update the <script> element from which you removed the jQuery code as follows:
 <script src="js/scripts.js"></script>
 
@@ -142,6 +148,8 @@ Then, type the following at the prompt to start watching for changes to the Sass
 npm start
 Now, whenever you make any changes to styles.scss file, it will automatically be compiled to the corresponding .css file. 
 You can test this by making a small change to your styles.scss file, and you'll be able to see the recompilation happen in real time. 
+
+
 
 
 

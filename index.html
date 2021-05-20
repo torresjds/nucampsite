@@ -320,32 +320,23 @@
 
 
             <!--jQuery Pause and Cycle Scripting, , Single Toggle CYCLE button-->
-     <script>
-        $(function() {
-            $(".carousel").carousel( { interval: 2000 } );
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                    $(".carousel").carousel("pause");
-                    $("#carouselButton").children("i").removeClass("fa-pause");
-                    $("#carouselButton").children("i").addClass("fa-play");
-                } else {
-                    $(".carousel").carousel("cycle");
-                    $("#carouselButton").children("i").removeClass("fa-play");
-                    $("#carouselButton").children("i").addClass("fa-pause"); 
-                }
-            });
-        });
-    </script>
+            <!--moved jQuery Pause and Cycle script to its own folder and file-->
+
+            <!--update script element with a source attribute-->
+
+    <script src="js/scripts.js"></script>
 
 
             <!--tooltips over Reserve Button, deleted-->
     
-    <!--tooltips over Reserve button
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>tooltips over Reserve button-->
+            <!--tooltips over Reserve button
+            
+                <script>
+                    $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+            </script> -->
+    
 
 </body>
 
