@@ -1,8 +1,8 @@
 /* Scss Variables*/
 
 $color-primary: #30c5ac;
-$color-secondary: #065b70;
-$color-pale: #349e90;
+$color-secondary: #4eddc5;
+$color-pale: #f1f1f1;
 $color-mid: #0b3a33;
 $color-dark: #106b54;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
@@ -44,7 +44,7 @@ header {
 }
 
 .site-footer {
-    background-image: linear-gradient($color-pale, white);
+    background-image: linear-gradient($color-secondary, white);
     padding: 20px 0;
 }
 
