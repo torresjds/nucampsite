@@ -3,14 +3,16 @@
 $color-primary: #30c5ac;
 $color-secondary: #4eddc5;
 $color-pale: #f1f1f1;
-$color-mid: #0b3a33;
+$color-mid: #6b0879;
 $color-dark: #106b54;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal: #17a2b8;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
 
 /* css */
+
 
 body {
     font-family: $body-font;
@@ -43,6 +45,7 @@ header {
     z-index: 100;
 }
 
+
 .site-footer {
     background-image: linear-gradient($color-secondary, white);
     padding: 20px 0;
@@ -72,6 +75,17 @@ header {
 .carousel {
     border: solid $color-secondary;
 }
+
+#reserveButton{
+    background-color: $color-teal; 
+        color: white; 
+}
+.modal-header{
+        
+        background-color: $color-mid;
+        color: white;
+    }
+
 
 /*
 .tab-content{

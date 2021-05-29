@@ -39,13 +39,21 @@ header h2 {
   min-height: 200px; }
 
 .navbar {
-  background-color: #0b3a33; }
+  background-color: #6b0879; }
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5); }
 
 .carousel {
   border: solid #4eddc5; }
+
+#reserveButton {
+  background-color: #17a2b8;
+  color: white; }
+
+.modal-header {
+  background-color: #6b0879;
+  color: white; }
 
 /*
 .tab-content{
