@@ -1,0 +1,275 @@
+There are two variants of the while loop: 
+
+the while and the do ... while.
+
+We'll begin with the first. 
+
+This is the syntax of the while loop:
+
+while (condition) {
+    ...code to be executed...
+}
+
+Notice that you do not use a semicolon after the curly brace that ends the while code block.
+
+Open your developer console and enter the following:
+
+let i = 0;  //here, you declared and initialized th variable, i, to 0. in your console, after hitting enter, the (i), initialized to 0 and showed up as, 0.
+
+
+while (i < 10) {
+    console.log("The iterator is", i);
+    i++;
+}
+
+ANSWER to while loop:
+
+
+VM199:2 0
+VM199:2 1
+VM199:2 2
+VM199:2 3
+VM199:2 4
+VM199:2 5
+VM199:2 6
+VM199:2 7
+VM199:2 8
+VM199:2 9
+9
+
+This should have printed the numbers 0 through 9. Do not worry about the final extra 9 - that is the developer console giving you the final value of i. You would not see that if you were running this code from a file. 
+
+Let's trace the logic. First, you declared and initialized a variable i to 0. 
+
+The name of this variable is not required to be i, but it is common practice for programmers to use that name as a shorthand for iterator. This variable is going to keep track for us of how many times we go through the loop. 
+
+Every time you go through the loop, it's called an iteration.
+
+Iteration Steps in a While Loop:
+Step 1:
+On the first iteration, the condition inside the parentheses is checked. 
+
+Step 2:
+If the condition is truthy, then the code block following the while loop, the while loop body, is entered. 
+
+Step 2a:
+If the condition is falsy, then we exit and continue with whatever code follows the while loop, if any.
+
+In the Example Above, steps taken with WHILE LOOP:
+
+1. In this case, we know that we enter the loop on the first iteration, since we set the value of i to 0, so we know that i is less than 10. 
+
+2. Inside the loop body, we execute some code. In this case, we are simply logging the value of i to the console. 
+
+3. Then we increment the iterator. 
+The importance of this step cannot be exaggerated. We must, in some way, always put a way, inside a while loop, for the condition, to Eventually, BE Evaluated as False.
+
+Here, INCREMENTING THE ITERATOR, makes sure, that eventually, (i), will not be less than 10, and we can EXIT the while loop.
+
+Otherwise, the loop would continue forever - it would be an INFINITE LOOP.
+
+At minimum, an infinite loop will throw an error. THIS IS BAD. 
+
+WorsT Case Scenario, an infinit loop, can freeze or crash your browser or computer, or even worse. 
+
+IT IS YOUR DUTY AS A PROGRAMMER TO PREVENT INFINITE LOOPS FROM OCCURRING IN YOUR CODE.
+
+Make sure before you move on, that you understand, why an infinite loop would be caused, if we did not increment the iterator in our example while loop.
+
+1. ONCE the end of the, While Loop Body, is reached:
+
+2. We, Loop Back, to the top of the loop and 
+
+3. Evaluate the condition once again, with the new value of (i). 
+
+4. If (i) is still less than 10, then we enter the while loop body again, and repeat until (i) is no longer less than 10. 
+
+
+DO...WHILE LOOPS ::
+
+The other variation of the while loop is the do ... while loop.
+
+Enter this into your console:
+
+i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i > 0 && i < 10);
+
+If i equals 0, then the condition (i > 0 && i < 10) should evaluate as falsy.
+
+BUTTTT, because this is a do ... while loop, that means that the code inside the loop body gets EXECUTED, NO MATTER WHAT.
+
+After one execution, the while condition gets evaluated, and the loop continues if the condition is truthy and exits otherwise.
+
+In this case, i is incremented in that first execution, so i is now greater than 0 and the while condition is truthy, so it will continue the loop until i is 10.
+
+If you did this as a while loop, nothing would happen. Try it yourself:
+i = 0;
+while (i > 0 && i < 10) {
+    console.log(i);
+    i++;
+}
+   It ENDED UP, as UNDEFINED.
+
+
+BREAK  STATEMENTS ::
+
+The break statement will let you break out of a while loop completely. Enter this into your console:
+
+i = 0;
+let earlyEscapeNum = 6;
+while (i < 10) {
+    if (i === earlyEscapeNum) {
+        break;
+    }
+    console.log("The iterator is", i);
+    i++;
+}
+
+The iterator is 0
+VM552:7 The iterator is 1
+VM552:7 The iterator is 2
+VM552:7 The iterator is 3
+VM552:7 The iterator is 4
+VM552:7 The iterator is 5 //  *breaks while loop, before earlyEscapNum, of 6 
+
+The CONTINUE STATEMENT will let you skip an iteration and move to the next iteration. 
+It will simply, skip all the code below the continue statement, and go back to the top of the loop, evaluating the condition once again. Enter this into your console:
+
+i = 0;
+let skipNum = 6;
+while (i < 10) {
+    i++;
+    if (i === skipNum) { 
+        continue;
+    }
+    console.log("The iterator is", i);
+}
+
+The iterator is 1
+VM547:8 The iterator is 2
+VM547:8 The iterator is 3
+VM547:8 The iterator is 4
+VM547:8 The iterator is 5 //*SKIPPED, the skipNum of 6
+VM547:8 The iterator is 7
+VM547:8 The iterator is 8
+VM547:8 The iterator is 9
+VM547:8 The iterator is 10
+
+In the above case, you can see that the iterator was moved to the top of the loop body instead of the bottom, so that it would happen before the continue statement. Otherwise, an infinite loop would have occurred since i would have never incremented. Make sure you think about this and understand it before you continue. 
+
+--------------------------------
+
+FOR LOOPS::
+
+for loop, SYNTAX :
+
+for ([initialization]; [condition]; [final-expression]) {
+    ...code block to execute...
+}
+
+The expressions inside the for loops are technically optional, but typically you will use all of them.
+
+The terms "initialization" "condition" and "final-expression" to describe the three parts of a for loop are not official terms, but they are used by MDN and are as good as any. You may see them referred to by other terms in other places. 
+
+Open your developer console and type in the following code. 
+This for loop will print the numbers 0-9, 
+just as the while loop did in the previous lesson.
+
+ Examine this code as you read further below.
+
+for (let i = 0; i < 10; i++) {
+    console.log("The iterator is", i);
+}
+Answer to Above
+
+The iterator is 0
+VM648:2 The iterator is 1
+VM648:2 The iterator is 2
+VM648:2 The iterator is 3
+VM648:2 The iterator is 4
+VM648:2 The iterator is 5
+VM648:2 The iterator is 6
+VM648:2 The iterator is 7
+VM648:2 The iterator is 8
+VM648:2 The iterator is 9
+
+
+Consider a while loop. There is a very common pattern when you write a while loop, as we have explored. 
+
+First, you initialize a variable that acts as an iterator - a variable that either increments or decrements inside the loop body. 
+
+Second, you set a condition. 
+
+Third, at the end of the loop body execution, you change the iterator (usually by incrementing or decrementing it) so that it will eventually not meet the condition to continue the loop.
+
+THE, FOR LOOP, CONDENSES, initialization, condition and incrementaion or decrementation, ALL, IN ONE LINE.
+
+FOR LOOP, ONE LINER::
+
+1. First, in the initialization section, you initialize a variable: 
+
+let i = 0; This initializer only occurs once per for loop - the very first iteration.
+
+2. Add the condition: i < 10;
+ the loop will continue as long as i is less than 10. 
+ This condition will be checked at the start of each iteration. If the condition is no longer true, then the for loop will exit.
+
+3. Then add the final-expression: i++
+
+ This final-expression, as its name indicates, occurs at the end of every iteration, right before the condition is evaluated again for the second iteration. 
+
+Just as in a while loop, you can use break and continue in, a for loop. 
+
+You do not have to worry about where the iterator is incremented/decremented. 
+
+The final-expression will occur at the end of the iteration, even if some of the code was skipped due to using continue.
+
+Type this into your console to practice using continue:
+
+let skipNum = 5;
+for (let i = 0; i < 10; i++) {
+    if (i === skipNum) {
+        continue;
+    }
+    console.log("The iterator is", i);
+}
+
+The iterator is 0
+VM684:6 The iterator is 1
+VM684:6 The iterator is 2
+VM684:6 The iterator is 3
+VM684:6 The iterator is 4
+VM684:6 The iterator is 6
+VM684:6 The iterator is 7
+VM684:6 The iterator is 8
+VM684:6 The iterator is 9
+
+Finally, understand that you do not always have to use i++. 
+
+Any statement that, changes the value of i, such that it will eventually fail the condition, will work. 
+
+For example, you could count backwards by using i-- to decrement instead of increment. 
+
+Type this into your console:
+
+for (let i = 10; i > 0; i--) {
+    console.log("The iterator is", i);
+}
+
+You can see that we initialized the iterator at 10, set the condition to check that i is larger than 0, then counted backwards. 
+
+The iterator is 10
+VM690:2 The iterator is 9
+VM690:2 The iterator is 8
+VM690:2 The iterator is 7
+VM690:2 The iterator is 6
+VM690:2 The iterator is 5
+VM690:2 The iterator is 4
+VM690:2 The iterator is 3
+VM690:2 The iterator is 2
+VM690:2 The iterator is 1
+
+We must be very careful with for loops, as with while loops, not to set it up in such a way as to cause an infinite loop.

@@ -16,3 +16,15 @@
                 }
             });
         });
+
+        $(function() {
+            $('#loginButton').click(function(){
+                $('#myModal').modal('show')
+            });
+        });
+
+        $(function() {
+            $('#reserveButton').click(function(){
+                $('#reserveModal').modal('show')
+            });
+        });

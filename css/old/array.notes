@@ -1,0 +1,297 @@
+
+ARRAYS::
+
+An array is a list of items that are numerically indexed, starting with 0 (zero-indexed).
+
+
+CREATING, AN ARRAY::
+
+To create an array, use square brackets with the items inside, separated by commas.
+
+
+Open your developer console and enter the following:
+[4, 5, 6, 7]
+
+
+You have just created an array. But you didn't put it anywhere, so it's just gone into the ether. 
+
+
+Enter this:
+let myArr = [4, 5, 6, 7]
+
+1.This time, you've created an array with numbers inside it 
+
+2. and put it inside the variable myArr. 
+
+An array does not always have to contain items of the same data type. 
+
+MIXED DATA ARRAYS:
+
+You could create an array with items of mixed data types, like this:
+myArr = [6, 'a', true, 2]
+
+But typically you will see arrays having items of a single data type. Just understand that's not a requirement of arrays.
+
+NUMERIC INDEXED at ZERO:
+
+Arrays are numerically indexed, which means that every item in the array has a numeric index based on its position within the array. 
+
+Because arrays are zero-indexed, that means the first item in the array will have an index of 0.
+
+ The second item in the array will have an index of 1, and so on.
+
+RETRIEVAL, USING, THE INDEX:
+
+You can retrieve an item that's stored in an array by using its index, like this (enter it into the console):
+
+myArr[0];
+
+What code would you type to retrieve the item in the array myArr with the index of 3?
+
+What happens if you try to retrieve an item at an index that doesn't exist? Try it:
+
+myArr[10]; // because the array consists of 4,5,6 & 7, the result is, undefined
+
+
+To get the length of an array, type this:
+myArr.length;
+
+the length of the, array, is 4, total
+
+
+If you have 4 items in an array, that means that the indices will be 0, 1, 2, and 3, for example.
+
+What code would you type to retrieve the value of the last item in an array, if you did not know the length of the array?
+
+
+ARRAY METHODS
+
+Arrays are a very commonly used data structure, and JavaScript has many built-in methods that are used with arrays. 
+
+A method is a function that is tied to an object. 
+
+But you thought we were talking about arrays, not objects?
+
+
+Aarrays are a special type of object, and they are able to have methods.
+
+INDEXOF METHOD:
+
+One such method is indexOf(). 
+
+If you know the value of an item in an array, you can get its corresponding index :
+
+
+myArr.indexOf(6);
+//the index of the, array value's 6, is 2
+
+index value, of an array, NOT STORED:
+myArr.indexOf(10);
+// the result is, -1
+
+myArr.index(10);
+// the result, is still, -1
+
+
+MULTIPLE ITEMS, WITH THE SAME VALUE, IN AN ARRAY:
+
+
+For example, enter the following:
+
+myArr = [3, 3, 3];
+Now, look for the index of 3:
+myArr.indexOf(3);
+
+//the result, is, 0, which is the first index of the three, number 3's
+
+INCLUDES, check method of looking for a value in an array:
+
+myArr.includes()
+
+WIll check for a matching item, in an array, then return, true, if found or, false, if not found.
+
+myArr.includes(3)
+//returns, true
+
+myArr.includes(4)
+//returns, false, since 4, is not part of the array
+
+
+CONCAT METHOD:
+
+The method concat() will take two arrays then return one new array that contains both.
+
+Enter the following:
+
+let arr1 = [1,2,3]; (hit enter to initialize)
+let arr2 = [4,5,6]; (hit enter to initialize)
+let arr3 = arr1.concat(arr2); (hit enter to initialize)
+arr3 (enter arr3, then hit enter)
+(6) [1, 2, 3, 4, 5, 6] //* result is the concatenation of both arrays
+
+re-enter original arrays, to re-check their values:
+
+arr1
+(3) [1, 2, 3] //*back to original array
+
+arr2
+(3) [4, 5, 6] //* back to original array
+
+
+
+JOIN METHOD:
+
+The method join() will create a string that contains all the items from two arrays, separated by commas by default.
+
+let arr3ToString = arr3.join();
+
+Enter the following:
+
+arr3.join(); //*initialize
+"1,2,3,4,5,6" //*result
+
+let arr3ToString = arr3.join(); //*initialize
+undefined       //*result
+
+arr3ToString  //*initialize
+"1,2,3,4,5,6"   //*result
+
+arr3.join(""); //*initialize, parentheses, to separate numbers by spaces
+"123456"
+
+arr3.join(" , "); //*initialize, parentheses with a comma, to separate numbers with commas
+"1 , 2 , 3 , 4 , 5 , 6"
+
+
+COMMANALITY OF METHODS:
+is that, they,  do not change,  the original array,  upon which they operate. 
+
+Check what is stored in arr1, arr2, and arr3 - they all contain the same items they did when they were first created. 
+
+
+MUTATOR METHODS ::
+ push(), pop(), shift(), unshift()
+
+Push and Pop:
+
+To begin, create this array in your console. 
+
+let myArr = ['a', 'b', 'c', 'd'];
+Then enter this:
+myArr.push('e');
+
+ANSWER to above:
+
+let myArr = ['a', 'b', 'c', 'd']; //*initialize
+undefined
+myArr.push('e');  //*initialize
+5       //*new array length of, 5, with the PUSH, mutator method
+
+You should see that this array method returns the new length of the array, which is 5, and if you check the value of myArr, you should see that 'e' has been added to the end. 
+
+myArr //*re-checking myArr, AFTER, push method
+(5) ["a", "b", "c", "d", "e"]       //*array length ,now includes e
+
+POP MUTATOR METHOD::
+add or remove items from the end of an array
+
+myArr.pop(); //*initialize
+"e" //*result, is the value of the last item from the array. 
+
+
+If you check the contents of myArr now, you should see that 'e' is no longer in it. 
+
+myArr //*initialize
+(4) ["a", "b", "c", "d"] //*result, removes (e), 
+
+So pop() both removes the last item and returns it. 
+
+You can put the return value, pop, inside a variable.
+
+Enter this:
+
+let letter = myArr.pop();  //*initialize
+undefined  //*result
+myArr //*re-checking myArr
+(3) ["a", "b", "c"]  //* results
+
+You should be able to see that myArr now has one less item, and that item has been put inside the variable letter. 
+
+METHODS, work just like functions
+1. they require the parentheses after the method name, which contain the parameter list. 
+2. Even if there are no parameters being passed to the method, you still need to use an empty set of parentheses, as with pop(). 
+3. If you just typed myArr.pop, it would not work.
+
+CONTINUOS popping of the array with myArr.pop(), 
+myArr.pop();
+"c"
+myArr.pop();
+"b"
+myArr.pop();
+"a"
+myArr.pop();
+undefined  //*eventually you would end up with an empty array.
+
+MULTIPLE, PUSH ITEMS:
+When you use push(), you can push multiple items in at the same time. 
+
+Enter this:
+myArr.push('a', 'b', 'c'); //*initialize
+3           //*result
+
+
+UNSHIFT and SHIFT, arrays
+
+unshift() and shift() will add or remove items from the start of the array.
+
+myArr.shift() will remove the first item from the beginning of myArr and return it.
+
+Enter the below command into your console:
+
+let letter = myArr.shift();
+
+If you now check the value of letter, you can see that it holds the first item that was in the array. And if you check the value of myArr, you can see that the first item was removed.
+
+
+EXAMPLE, modified by me, for practice, 
+
+let myArr = ['a', 'b', 'c', 'd'];
+undefined
+
+myArr   //*check myArr
+(4) ["a", "b", "c", "d"]    //*result
+
+myArr.push('e');    //*push method
+5       //*result
+
+myArr.pop(); //*pop method
+"e"     //*result
+
+CAN EVEN, use the POP, as a variable, itself, so let, the "letter", equal, myArr.pop::
+
+let letter = myArr.pop(); //*initialize
+undefined  //* result
+
+myArr       //*check myArr
+(3) ["a", "b", "c"] //* results
+
+let letter = myArr.shift(); //*using myArr.shift as the variable, initialize
+undefined //*results
+
+myArr   //*checking, initialize
+(2) ["b", "c"]
+letter  //*checking, initialize
+"a" //*result
+
+
+Like push(), unshift() will add items to an array and return the new length of the array. Try it:
+myArr.unshift(1);
+
+Like push(), you can add more than one item at a time:
+myArr.unshift(5,6,7);
+
+Notice that the side effect here, which you did not see with pop() and push(), is that you are changing the index of every single item in the array when you use unshift() and shift(). 
+For example, when you unshift() a new item into the beginning of an array, then the array item which previously had the index of 0 now has the index of 1, the array item with index 1 now has index 2, and so on. 
+That gives you a way to remember how to tell these sets of methods apart -- shift() and unshift() actually shift the indices of the entire array, while push() and pop() do not. 
+There are many more array methods. Check out the links in the Additional Resources section and familiarize yourself with more of them. 
+

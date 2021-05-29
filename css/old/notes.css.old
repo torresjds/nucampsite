@@ -244,13 +244,11 @@ If you have a web server that hosts your website, you can now copy the contents 
 Note
 There are many different workflows to ready your files for deployment. This is only one of them, so do not take it as canonical. In the real world, you will run into other methods such as using the module bundler Webpack, or task runners such as Grunt and Gulp. 
 
-
-
-Optional: Git
+Optional: GITIGNORE
 Open your .gitignore file in your editor and update it so that it reads as follows, preventing the "dist" folder from being added to the git repository:
 node_modules
 dist
 Commit all the changes to your local repository with the message "NPM Scripts Part 2". Push the commit to your remote repository.
 
-Summary
-In this exercise, you learned how to install and use various NPM modules in the scripts section of your package.json file to automate numerous processes that prepare your files for distribution, including image compression, code minification, uglification, and more. 
+
+
