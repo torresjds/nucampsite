@@ -1,12 +1,13 @@
 /* Scss Variables*/
 
 $color-primary: #30c5ac;
-$color-secondary: #4eddc5;
+$color-secondary: #34bda6;
 $color-pale: #f1f1f1;
 $color-mid: #6b0879;
 $color-dark: #106b54;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
 $color-teal: #17a2b8;
+$color-nurple: #8c3aa5;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
@@ -47,7 +48,7 @@ header {
 
 
 .site-footer {
-    background-image: linear-gradient($color-secondary, white);
+    background-image: linear-gradient(to right, $color-primary, $color-secondary, $color-nurple, $color-mid, );
     padding: 20px 0;
 }
 
@@ -65,7 +66,7 @@ header {
 }
 
 .navbar {
-    background-color: $color-mid;
+    background-image: linear-gradient(to right, $color-primary, $color-secondary, $color-nurple, $color-mid);
 }
 
 .carousel-caption {
@@ -77,14 +78,24 @@ header {
 }
 
 #reserveButton{
-    background-color: $color-teal; 
+    background-color: $color-nurple; 
         color: white; 
 }
-.modal-header{
-        
-        background-color: $color-mid;
+
+#reserveModal {
+    .modal-header{
+       background-color: $color-secondary;
+       color: white;
+    }   
+} 
+
+#myModal {
+    .modal-header {
+        background-color: $color-nurple;
         color: white;
     }
+}
+    
 
 
 /*
